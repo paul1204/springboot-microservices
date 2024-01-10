@@ -35,4 +35,8 @@ public class OrderService {
         orderLineItems.setSkuCode(orderLineItemsDto.getSkuCode());
         return orderLineItems;
     }
+
+    public List<Order> getAll(){
+        return orderRepository.findAll();
+    }
 }
