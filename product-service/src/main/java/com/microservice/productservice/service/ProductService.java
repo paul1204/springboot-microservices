@@ -42,5 +42,7 @@ public class ProductService {
                 .price(p.getPrice())
                 .build();
     }
-
+    public void delete(String id){
+        productRepository.deleteById(id);
+    }
 }

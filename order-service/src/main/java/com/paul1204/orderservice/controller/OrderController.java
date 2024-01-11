@@ -27,4 +27,11 @@ public class OrderController {
     public List<Order> getAll(){
         return orderService.getAll();
     }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String delete(@RequestBody Long id){
+        orderService.delete(id);
+        return "Deleted!";
+    }
 }

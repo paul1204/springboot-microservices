@@ -28,5 +28,10 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
-
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String deleteProduct(@RequestBody String id){
+        productService.delete(id);
+        return "deleted!";
+    }
 }
